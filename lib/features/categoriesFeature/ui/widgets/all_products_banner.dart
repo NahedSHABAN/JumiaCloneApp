@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/utils/constants/app_colors.dart';
+
+class AllProductsBanner extends StatelessWidget {
+  const AllProductsBanner({
+    super.key,
+    required this.appColors,
+  });
+
+  final AppColors appColors;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        height: 40.h,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(7),
+          color: appColors.secondColor,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Text('ALL PRODUCTS',
+                style: TextStyle(
+                    fontSize: 12.5.sp
+                ),
+              ),
+              const Spacer(),
+              Icon(Icons.arrow_forward_ios,size: 15.sp,)
+            ],
+          ),
+        ),
+
+    );
+  }
+}
