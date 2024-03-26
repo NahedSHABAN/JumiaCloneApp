@@ -67,11 +67,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 child: Icon(
                   Icons.search_sharp,
                   color: Colors.black,
+
                 ),
               ),
               Expanded(
                 child: TextFormField(
-                  autofocus: true,
                   cursorColor: AppColors.appBarActive,
                   decoration: const InputDecoration(
                     border: InputBorder.none,

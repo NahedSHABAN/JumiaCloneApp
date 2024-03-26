@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jumia/features/categoriesFeature/ui/widgets/all_products_banner.dart';
 import 'package:jumia/features/categoriesFeature/ui/widgets/categorList.dart';
 import 'package:jumia/features/categoriesFeature/ui/widgets/category_products.dart';
 
@@ -49,6 +47,7 @@ class _CategoriesState extends State<Categories> {
       body: Row(
         children: [
           CategoryList(
+
             categoryNames:categories ,
             selectedIndex: selectedIndex,
             pagesCount:categories.length ,
@@ -57,6 +56,7 @@ class _CategoriesState extends State<Categories> {
                 selectedIndex = index;
                 _pageController.jumpToPage(index);
               });
+
             },
           ),
           Expanded(
@@ -68,7 +68,7 @@ class _CategoriesState extends State<Categories> {
                   appColors: appColors,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -97,6 +97,9 @@ flutter:
        fonts:
          - asset: fonts/MyFlutterApp.ttf
          - asset: fonts/heart.ttf
+         - asset: fonts/boxIcon.ttf
+
+
 
 
   # For details regarding fonts from package dependencies,

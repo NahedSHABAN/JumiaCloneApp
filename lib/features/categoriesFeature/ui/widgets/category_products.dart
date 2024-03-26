@@ -1,21 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/app_colors.dart';
-import 'all_products_banner.dart';
-import 'all_products_container.dart';
-import 'category_container.dart';
+import 'category_details.dart';
 
 class CategoryProducts extends StatelessWidget {
-   CategoryProducts({
-    Key? key,
-    required PageController pageController,
-    required this.pagesCount,
-    required this.appColors,
-  })  : _pageController = pageController,
-        super(key: key);
+  CategoryProducts(
+      {super.key,
+      required this.pagesCount,
+      required this.appColors,
+      required this.pageController});
 
-  final PageController _pageController;
+  final PageController pageController;
   final int pagesCount;
   final AppColors appColors;
 
@@ -27,41 +22,21 @@ class CategoryProducts extends StatelessWidget {
     // 'assets/images/HomeSale/5.png',
     // 'assets/images/HomeSale/6.png',
   ];
-   final List<String> titles=[
-     'Juices',
-     'Coffee, Tea & Cocoa'
-   ];
+  final List<String> titles = ['Juices', 'Coffee, Tea & Cocoa'];
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
-      controller: _pageController,
+      controller: pageController,
       itemCount: pagesCount,
       itemBuilder: (BuildContext context, int index) {
-        return Padding(
-          padding: EdgeInsets.all(15.0),
-          child: Container(
-            width: double.infinity,
-            color: appColors.primaryColor,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                AllProductsBanner(
-                  appColors: appColors,
-                ),
-                10.verticalSpace,
-                CategoryContainer(appColors: appColors, saleImages1: saleImages1, titles: titles),
-                10.verticalSpace,
-                CategoryContainer(appColors: appColors, saleImages1: saleImages1, titles: titles),
-
-              ],
-            ),
-          ),
+        return CategoryDetails(
+          appColors: appColors,
+          saleImages1: saleImages1,
+          titles: titles,
+          index: pageController.page??0,
         );
       },
     );
   }
 }
-
-
-

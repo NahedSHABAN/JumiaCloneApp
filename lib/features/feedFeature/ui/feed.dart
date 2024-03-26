@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jumia/core/utils/constants/app_colors.dart';
-import 'package:jumia/features/feedFeature/ui/widgets/following_screen.dart';
+import 'package:jumia/features/feedFeature/ui/following_screen.dart';
 
 import 'explore_screen.dart';
 
 class Feed extends StatefulWidget {
-  const Feed({Key? key}) : super(key: key);
+  const Feed({super.key});
 
   @override
   State<Feed> createState() => _FeedState();
@@ -20,7 +19,7 @@ class _FeedState extends State<Feed> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      animationDuration: Duration(microseconds: 500),
+      animationDuration: const Duration(microseconds: 500),
       length: 2,
       child: Scaffold(
         backgroundColor: appColors.primaryColor,
@@ -53,7 +52,7 @@ class _FeedState extends State<Feed> {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
               ],
             ),
           ),
