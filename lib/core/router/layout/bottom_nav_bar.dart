@@ -19,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _currentIndex = 0;
   final appColors = const AppColors();
   final List<Widget> screens = [
-    const Cart(),
+    const HomeScreen(),
     const Categories(),
     const Feed(),
     const Account(),
