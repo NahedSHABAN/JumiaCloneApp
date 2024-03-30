@@ -39,6 +39,10 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   flutter_screenutil: ^5.9.0
   flutter_timer_countdown: ^1.0.7
+  flutter_rating_bar: ^4.0.1
+  cloud_firestore: ^4.15.10
+  firebase_auth: ^4.18.0
+  firebase_core: ^2.27.2
 
 dev_dependencies:
   flutter_test:

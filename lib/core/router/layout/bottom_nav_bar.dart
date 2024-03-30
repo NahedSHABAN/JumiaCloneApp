@@ -5,6 +5,8 @@ import 'package:jumia/features/homeFeature/ui/home_screen.dart';
 import 'package:jumia/features/categoriesFeature/ui/categoreies.dart';
 import 'package:jumia/features/feedFeature/ui/feed.dart';
 import '../../utils/constants/app_colors.dart';
+import '../../../features/Products/Products.dart';
+import 'package:jumia/features/Cart/Cart.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -21,9 +23,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const Categories(),
     const Feed(),
     const Account(),
-    const Help()
+    const Help(),
+    const Products(),
+    const Cart(),
   ];
-  final List<String> titles = ['', '', 'Feed', 'Account', 'Help'];
+  final List<String> titles = ['', '', 'Feed', 'Account', 'Help' ,'Products','Cart'];
 
   @override
   Widget build(BuildContext context) {
@@ -34,61 +38,60 @@ class _BottomNavBarState extends State<BottomNavBar> {
         backgroundColor: AppColors.appBarColor,
         actions: showIcon
             ? [
-          Padding(
-            padding: const EdgeInsetsDirectional.only(end: 10),
-            child: Icon(Icons.shopping_cart_outlined,
-                color: appColors.secondColor),
-          ),
-        ]
-            : [
-          Padding(
-            padding: const EdgeInsetsDirectional.only(end: 10),
-            child: Row(
-              children: [
-                Icon(Icons.search_sharp,
-                    color: appColors.secondColor),
-                const SizedBox(width: 10),
-                Icon(Icons.shopping_cart_outlined,
-                    color: appColors.secondColor),
-              ],
-            ),
-          ),
-        ],
-        title: showSearch
-            ? Container(
-          decoration: BoxDecoration(
-            color: appColors.secondColor,
-            borderRadius: const BorderRadius.all(Radius.circular(7)),
-          ),
-          child: Row(
-            children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Icon(
-                  Icons.search_sharp,
-                  color: Colors.black,
-
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(end: 10),
+                  child: Icon(Icons.shopping_cart_outlined,
+                      color: appColors.secondColor),
                 ),
-              ),
-              Expanded(
-                child: TextFormField(
-                  cursorColor: AppColors.appBarActive,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Search on Jumia',
+              ]
+            : [
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(end: 10),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search_sharp, color: appColors.secondColor),
+                      const SizedBox(width: 10),
+                      Icon(Icons.shopping_cart_outlined,
+                          color: appColors.secondColor),
+                    ],
                   ),
                 ),
-              ),
-            ],
-          ),
-        )
+              ],
+        title: showSearch
+            ? Container(
+                decoration: BoxDecoration(
+                  color: appColors.secondColor,
+                  borderRadius: const BorderRadius.all(Radius.circular(7)),
+                ),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Icon(
+                        Icons.search_sharp,
+                        color: Colors.black,
+                      ),
+                      
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        cursorColor: AppColors.appBarActive,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Search on Jumia',
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             : Text(
-          titles[_currentIndex],
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: appColors.secondColor,
-          ),
-        ),
+                titles[_currentIndex],
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: appColors.secondColor,
+                ),
+              ),
       ),
       body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

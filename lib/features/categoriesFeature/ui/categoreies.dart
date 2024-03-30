@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jumia/features/categoriesFeature/ui/widgets/categorList.dart';
 import 'package:jumia/features/categoriesFeature/ui/widgets/category_products.dart';
-
 import '../../../core/utils/constants/app_colors.dart';
 
 class Categories extends StatefulWidget {
