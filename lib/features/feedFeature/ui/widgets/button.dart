@@ -4,14 +4,14 @@ import '../../../../core/utils/constants/app_colors.dart';
 
 class Button extends StatelessWidget {
   const Button({
-    super.key,
+    Key? key,
     required this.appColors,
     required this.title,
     required this.onPressed,
     required this.width,
     required this.color,
     required this.backgroundColor,
-  });
+  }) : super(key: key);
 
   final AppColors appColors;
   final String title;
@@ -31,10 +31,10 @@ class Button extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style:TextStyle(
+          style: TextStyle(
             color: color,
             fontSize: 15.sp,
-          ) ,
+          ),
         ),
       ),
     );

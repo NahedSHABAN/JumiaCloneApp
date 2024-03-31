@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../core/utils/constants/app_colors.dart';
 
-class LoginTextField extends StatefulWidget {
-  const LoginTextField(
+class NameTextField extends StatefulWidget {
+  const NameTextField(
       {Key? key, required this.label, required this.onValueChanged})
       : super(key: key);
 
@@ -12,20 +11,18 @@ class LoginTextField extends StatefulWidget {
   final void Function(String) onValueChanged;
 
   @override
-  State<LoginTextField> createState() => _LoginTextFieldState();
+  State<NameTextField> createState() => _NameTextFieldState();
 }
 
-class _LoginTextFieldState extends State<LoginTextField> {
-  late String email; // Initialize email with an empty string
+class _NameTextFieldState extends State<NameTextField> {
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(30.0),
+      padding: const EdgeInsets.symmetric(horizontal:  30.0 , vertical: 20),
       child: TextFormField(
         onChanged: (value) {
           setState(() {
-            email = value; // Assign the value of the text field to email
             widget.onValueChanged(
                 value); // Notify the parent widget about the value change
           });

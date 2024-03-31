@@ -72,7 +72,9 @@ class Following extends StatelessWidget {
           Button(
             appColors: appColors,
             onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const Login()));
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => Login()),
+              );
             },
             title: 'SIGN IN',
             width: 330.w,

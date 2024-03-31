@@ -3,19 +3,23 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../core/utils/constants/app_colors.dart';
 
-class LoginTextField extends StatefulWidget {
-  const LoginTextField(
-      {Key? key, required this.label, required this.onValueChanged})
+class DisabledTextField extends StatefulWidget {
+  const DisabledTextField(
+      {Key? key,
+      required this.label,
+      required this.onValueChanged,
+      this.enabled = false}) 
       : super(key: key);
 
   final String label;
   final void Function(String) onValueChanged;
+  final bool enabled; // Add enabled property
 
   @override
-  State<LoginTextField> createState() => _LoginTextFieldState();
+  State<DisabledTextField> createState() => _DisabledTextFieldState();
 }
 
-class _LoginTextFieldState extends State<LoginTextField> {
+class _DisabledTextFieldState extends State<DisabledTextField> {
   late String email; // Initialize email with an empty string
 
   @override
@@ -30,6 +34,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
                 value); // Notify the parent widget about the value change
           });
         },
+        enabled: widget.enabled, // Set enabled property of TextFormField
         cursorColor: AppColors.appBarActive,
         decoration: InputDecoration(
           border: const OutlineInputBorder(),

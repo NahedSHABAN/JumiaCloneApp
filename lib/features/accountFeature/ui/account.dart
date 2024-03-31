@@ -9,10 +9,10 @@ import 'package:jumia/features/accountFeature/ui/widgets/settings_container.dart
 
 import '../../feedFeature/ui/widgets/button.dart';
 
-
 class Account extends StatefulWidget {
-  const Account({Key? key});
+  final bool isLoggedIn;
 
+  const Account({Key? key, this.isLoggedIn = false}) : super(key: key);
   @override
   State<Account> createState() => _AccountState();
 }
@@ -69,15 +69,14 @@ class _AccountState extends State<Account> {
                   padding: EdgeInsets.symmetric(horizontal: 3.w),
                   child: Button(
                     appColors: appColors,
-                    onPressed: (){},
-                    title: 'LOGIN',
+                    onPressed: () {},
+                    title: widget.isLoggedIn ? 'LOGOUT' : 'LOGIN',
                     width: 330.w,
                     backgroundColor: appColors.primaryColor,
-                    color:AppColors.appBarActive,
+                    color: AppColors.appBarActive,
                   ),
                 ),
                 10.verticalSpace,
-
               ],
             ),
           ),
@@ -86,9 +85,3 @@ class _AccountState extends State<Account> {
     );
   }
 }
-
-
-
-
-
-

@@ -3,33 +3,39 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../core/utils/constants/app_colors.dart';
 
-class LoginTextField extends StatefulWidget {
-  const LoginTextField(
-      {Key? key, required this.label, required this.onValueChanged})
-      : super(key: key);
+class PasswordField extends StatefulWidget {
+  const PasswordField({
+    Key? key,
+    required this.label,
+    required this.onValueChanged,
+    this.enabled = true,
+  }) : super(key: key);
 
   final String label;
   final void Function(String) onValueChanged;
+  final bool enabled; // Add enabled property
 
   @override
-  State<LoginTextField> createState() => _LoginTextFieldState();
+  State<PasswordField> createState() => _PasswordFieldState();
 }
 
-class _LoginTextFieldState extends State<LoginTextField> {
-  late String email; // Initialize email with an empty string
+class _PasswordFieldState extends State<PasswordField> {
+  late String password; // Initialize password with an empty string
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(30.0),
+      padding: const EdgeInsets.symmetric(horizontal:  30.0),
       child: TextFormField(
+        obscureText: true, // Set obscureText to true for password field
         onChanged: (value) {
           setState(() {
-            email = value; // Assign the value of the text field to email
+            password = value; // Assign the value of the text field to password
             widget.onValueChanged(
                 value); // Notify the parent widget about the value change
           });
         },
+        enabled: widget.enabled, // Set enabled property of TextFormField
         cursorColor: AppColors.appBarActive,
         decoration: InputDecoration(
           border: const OutlineInputBorder(),
