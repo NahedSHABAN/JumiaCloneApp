@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jumia/features/homeFeature/ui/widgets/Shop_all_images.dart';
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             CenterBanner(
               colors: const AppColors(),
-              title: 'Shop all Your Needs',
+              title: 'Shop all Your Needs'.tr(),
               color: appColors.bannerColor,
             ),
             const ShopAllImages(
@@ -71,41 +72,41 @@ class _HomeScreenState extends State<HomeScreen> {
                   image: 'assets/images/Products/1.jpg',
                   name:
                       'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '30',
                   image: 'assets/images/Products/2.jpg',
                   name:
                       'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '55',
                   image: 'assets/images/Products/3.jpg',
                   name:
                       'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/4.jpg',
                   name:
                       'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/5.jpg',
                   name:
                       'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
               ],
             ),
             CenterBanner(
               colors: const AppColors(),
-              title: 'Proudly Made In Egypt',
+              title: 'Proudly Made In Egypt'.tr(),
               color: appColors.madeInEgypt,
               postfix_icon: 'assets/images/Icons/heart.png',
               Suffix_icon: 'assets/images/Icons/heart.png',
@@ -161,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
             CategoryBanner(
               titleColor: appColors.black,
               colors: const AppColors(),
-              title: 'Top Selling For This Week',
+              title: 'Top Selling For This Week'.tr(),
               color: appColors.bannerColor,
               bottonTitle: 'SEE ALL',
               bottonColor: appColors.black,
@@ -173,39 +174,40 @@ class _HomeScreenState extends State<HomeScreen> {
                   sale: '55',
                   image: 'assets/images/Products/1.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '30',
                   image: 'assets/images/Products/2.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '55',
                   image: 'assets/images/Products/3.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/4.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/5.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
               ],
             ),
+
             CenterBanner(
               colors: const AppColors(),
               title: 'Best Beauty Offers',
@@ -227,39 +229,40 @@ class _HomeScreenState extends State<HomeScreen> {
                   sale: '55',
                   image: 'assets/images/Products/1.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '30',
                   image: 'assets/images/Products/2.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '55',
                   image: 'assets/images/Products/3.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/4.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/5.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
               ],
             ),
+
             CenterImage(
                 appColors: const AppColors(),
                 image: 'assets/images/HomeCenter/5.png',
@@ -288,39 +291,40 @@ class _HomeScreenState extends State<HomeScreen> {
                   sale: '55',
                   image: 'assets/images/Products/1.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '30',
                   image: 'assets/images/Products/2.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '55',
                   image: 'assets/images/Products/3.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/4.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/5.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
               ],
             ),
+
             CenterBanner(
               colors: const AppColors(),
               title: 'Discover Our Latest Collections',
@@ -365,56 +369,42 @@ class _HomeScreenState extends State<HomeScreen> {
                   sale: '55',
                   image: 'assets/images/Products/1.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '30',
                   image: 'assets/images/Products/2.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '55',
                   image: 'assets/images/Products/3.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/4.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
                 ProductData(
                   sale: '15',
                   image: 'assets/images/Products/5.jpg',
                   name:
-                      'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-                  price: 'EGP 378.00',
+                  'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
+                  price: ' 378.00 '+'EGP'.tr(),
                 ),
               ],
             ),
-            CategoryBanner(
-                titleColor: AppColors.grey,
-                title: 'TOP SELLING ITEMS',
-                bottonTitle: 'SEE ALL',
-                color: appColors.primaryColor,
-                bottonColor: AppColors.appBarActive,
-                colors: AppColors())
+
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: appColors.secondColor, // Set background color of FAB
-        foregroundColor: appColors.black, // Set icon color of FAB
-        elevation: 4, // Add light shadow
-        shape: const CircleBorder(),
-        child: const Icon(Icons.arrow_upward_sharp), // Make it circular
       ),
     );
   }
@@ -456,9 +446,9 @@ class SaleSection extends StatelessWidget {
         ),
         CategoryBanner(
           colors: const AppColors(),
-          title: 'L\'Oreal',
+          title: 'L\'Oreal'.tr(),
           color: appColors.bannerColor,
-          bottonTitle: 'SEE ALL',
+          bottonTitle: 'SEE ALL'.tr(),
           bottonColor: appColors.black,
           titleColor: appColors.black,
         ),
@@ -470,41 +460,42 @@ class SaleSection extends StatelessWidget {
               image: 'assets/images/Products/1.jpg',
               name:
               'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-              price: 'EGP 378.00',
+              price: ' 378.00 '+'EGP'.tr(),
             ),
             ProductData(
               sale: '30',
               image: 'assets/images/Products/2.jpg',
               name:
               'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-              price: 'EGP 378.00',
+              price: ' 378.00 '+'EGP'.tr(),
             ),
             ProductData(
               sale: '55',
               image: 'assets/images/Products/3.jpg',
               name:
               'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-              price: 'EGP 378.00',
+              price: ' 378.00 '+'EGP'.tr(),
             ),
             ProductData(
               sale: '15',
               image: 'assets/images/Products/4.jpg',
               name:
               'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-              price: 'EGP 378.00',
+              price: ' 378.00 '+'EGP'.tr(),
             ),
             ProductData(
               sale: '15',
               image: 'assets/images/Products/5.jpg',
               name:
               'Maybelline New York Maybelline New York Superstay Matte Ink Lipstick- 15 Lover',
-              price: 'EGP 378.00',
+              price: ' 378.00 '+'EGP'.tr(),
             ),
           ],
         ),
+
         CenterBanner(
           colors: const AppColors(),
-          title: 'Ramadan Preparations',
+          title: 'Ramadan Preparations'.tr(),
           postfix_icon: 'assets/images/thin-moon.png',
           color: appColors.bannerColor,
         ),

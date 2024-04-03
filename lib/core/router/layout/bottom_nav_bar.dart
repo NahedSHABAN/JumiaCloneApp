@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:jumia/features/accountFeature/ui/account.dart';
 import 'package:jumia/features/helpFeature/ui/help.dart';
@@ -21,7 +22,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const Categories(),
     const Feed(),
     const Account(),
-    const Help()
+    const Help(),
+
   ];
   final List<String> titles = ['', '', 'Feed', 'Account', 'Help'];
 
@@ -73,9 +75,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
               Expanded(
                 child: TextFormField(
                   cursorColor: AppColors.appBarActive,
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Search on Jumia',
+                    hintText: 'Search on Jumia'.tr(),
                   ),
                 ),
               ),
@@ -101,26 +103,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
             _currentIndex = index;
           });
         },
-        items: const [
+        items:  [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Home'.tr(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt),
-            label: 'Categories',
+            icon: const Icon(Icons.list_alt),
+            label: 'Categories'.tr(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.photo_filter_outlined),
-            label: 'Feed',
+            icon: const Icon(Icons.photo_filter_outlined),
+            label: 'Feed'.tr(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Account',
+            icon: const Icon(Icons.person_outline),
+            label: 'Account'.tr(),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.help_outline),
-            label: 'Help',
+            icon: const Icon(Icons.help_outline),
+            label: 'Help'.tr(),
           ),
         ],
         selectedIconTheme: IconThemeData(color: AppColors.appBarActive),

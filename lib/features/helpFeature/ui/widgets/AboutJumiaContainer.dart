@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/app_colors.dart';
@@ -22,19 +23,20 @@ class AboutJumiaContainer extends StatelessWidget {
             color: appColors.secondColor,
             borderRadius: BorderRadius.circular(7)
         ),
-        child: const Column(
+        child:  Column(
           children: [
             AboutButton(
-              title: 'Jumia Services',
+              title: 'Jumia Services'.tr(),
+
             ),
             AboutButton(
-              title: 'Help Center',
+              title: 'Help Center'.tr(),
             ),
             AboutButton(
-              title: 'Terms and conditions',
+              title: 'Terms and conditions'.tr(),
             ),
             AboutButton(
-              title: 'Privacy Policy',
+              title: 'Privacy Policy'.tr(),
             ),
           ],
         ),

@@ -15,7 +15,7 @@ class AppColors{
   static final appBarColor = Colors.black.withOpacity(0.8);
   static const grey = Colors.grey;
   final Color navyBlueColor = const Color(0xFF000080);
-
+  static const Color ratingColor = Color(0x00ffe234);
   static final textColor =Colors.grey.shade600;
   static final appBarActive =Colors.orange.shade600;
   const AppColors();

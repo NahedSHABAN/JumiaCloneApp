@@ -47,14 +47,13 @@ class _CategoriesState extends State<Categories> {
       body: Row(
         children: [
           CategoryList(
-
             categoryNames:categories ,
             selectedIndex: selectedIndex,
             pagesCount:categories.length ,
             onCategorySelected: (index) {
               setState(() {
                 selectedIndex = index;
-                _pageController.jumpToPage(index);
+                // _pageController.jumpToPage(index);
               });
 
             },
@@ -63,7 +62,8 @@ class _CategoriesState extends State<Categories> {
             child: Container(
               color: appColors.primaryColor,
               child: CategoryProducts(
-                  pageController: _pageController,
+                  // pageController: _pageController,
+                index: double.parse(selectedIndex.toString()),
                   pagesCount: pagesCount,
                   appColors: appColors,
               ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/app_colors.dart';
@@ -27,13 +28,13 @@ class InfoContainer extends StatelessWidget {
         child:  Column(
           children: [
             InfoButton(
-              title: 'App Version 14.12.0',
-              title2: 'Up To Date',
+              title: 'App Version 14.12.0'.tr(),
+              title2: 'Up To Date'.tr(),
               onPressed: (){},
             ),
             SecondSettingsButton(
-              title: 'Cashe Used: 0 B',
-              title2: 'Clear',
+              title: 'Cashe Used: 0 B'.tr(),
+              title2: 'Clear'.tr(),
               onPressed: (){},
             ),
           ],

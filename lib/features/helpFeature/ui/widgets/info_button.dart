@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +27,7 @@ class InfoButton extends StatelessWidget {
           children: [
 
             Text(
-              title,
+              title.tr(),
               style: TextStyle(
                 fontSize: 15.sp,
               ),
@@ -34,7 +35,7 @@ class InfoButton extends StatelessWidget {
 
             const Spacer(),
             Text(
-              title2,
+              title2.tr(),
               style: TextStyle(
                   fontSize: 13.sp,
                   color: AppColors.textColor

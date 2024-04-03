@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -44,7 +45,7 @@ class CenterBanner extends StatelessWidget {
                       SizedBox(width: 2.h),
                     ],
                     Text(
-                      title,
+                      title.tr(),
                       style:  TextStyle(fontWeight: FontWeight.bold , fontSize:15.sp),
                     ),
                     if (postfix_icon != null) ...[

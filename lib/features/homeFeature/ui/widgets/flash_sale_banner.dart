@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
@@ -24,7 +25,7 @@ class FlashSaleBanner extends StatelessWidget {
       padding: const EdgeInsetsDirectional.only(bottom: 10),
       child: Container(
         width: double.infinity,
-        height: 41.h,
+        // height: 41.h,
         decoration: BoxDecoration(color: appColors.flashSale),
         child: Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 8),
@@ -33,17 +34,17 @@ class FlashSaleBanner extends StatelessWidget {
               Stack(
                 children: [
                   Icon(
-                    MyFlutterApp.flash, // Use the custom flash icon
-                    size: 30.sp, // Set the icon size
-                    color: AppColors.appBarActive, // Set the icon color
+                    MyFlutterApp.flash,
+                    size: 30.sp,
+                    color: AppColors.appBarActive,
                   ),
                   Positioned(
-                    top: 10, // Adjust the position of the second icon vertically
-                    left: 10, // Adjust the position of the second icon horizontally
+                    top: 10,
+                    left: 10,
                     child: Icon(
-                      MyFlutterApp.tag, // Use the custom tag icon
-                      size: 12.sp, // Set the icon size
-                      color: appColors.flashSale, // Set the icon color
+                      MyFlutterApp.tag,
+                      size: 12.sp,
+                      color: appColors.flashSale,
                     ),
                   ),
                 ],
@@ -62,13 +63,25 @@ class FlashSaleBanner extends StatelessWidget {
                       vertical: 2.h,
                       horizontal: 5.w,
                     ),
-                    child: Text(
-                      'Flash Sales Every Day',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15.sp,
-                        color: appColors.secondColor,
-                      ),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Flash Sales'.tr(),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.sp,
+                            color: appColors.secondColor,
+                          ),
+                        ),
+                        Text(
+                          'Every Day'.tr(),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15.sp,
+                            color: appColors.secondColor,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Padding(
@@ -81,7 +94,7 @@ class FlashSaleBanner extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          'TIME LEFT :',
+                          'TIME LEFT :'.tr(),
                           style: TextStyle(
                             fontSize: 10.sp,
                             fontWeight: FontWeight.bold,

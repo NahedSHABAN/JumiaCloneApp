@@ -6,7 +6,6 @@ class BorderedButton extends StatelessWidget {
   const BorderedButton({
     super.key,
     required this.appColors,
-    required this.title,
     required this.onPressed,
     required this.width,
     required this.color,
@@ -17,7 +16,6 @@ class BorderedButton extends StatelessWidget {
   });
 
   final AppColors appColors;
-  final String title;
   final VoidCallback onPressed;
   final double width;
   final Color color;
@@ -30,7 +28,7 @@ class BorderedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40.h,
-      width: 300.w,
+      width: 50.w,
       child: MaterialButton(
         minWidth: width,
         elevation: 0,
@@ -43,27 +41,9 @@ class BorderedButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(5.0), // You can adjust the border radius
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-               icon,
-              color: appColors.secondColor,
-            ),
-            Padding(
-              padding:  EdgeInsets.symmetric(
-                horizontal: 50.w
-              ),
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: color,
-                  fontSize: 15.sp,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+        child: Icon(
+          icon,
+          color: borderColor,
         ),
       ),
     );

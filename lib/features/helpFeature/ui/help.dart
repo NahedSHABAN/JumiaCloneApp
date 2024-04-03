@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jumia/core/utils/constants/app_colors.dart';
@@ -31,7 +32,7 @@ class _HelpState extends State<Help> {
                 color: appColors.secondColor,
                 backgroundColor: AppColors.appBarActive,
                 width: 300.w,
-                title: 'Start Live Chat',
+                title: 'Start Live Chat'.tr(),
                 icon: Icons.chat_rounded,
                 appColors: const AppColors(),
                 onPressed: (){},
@@ -52,7 +53,7 @@ class _HelpState extends State<Help> {
             const AccountText(
               title: 'APP INFO',
             ),
-            InfoContainer(
+            const InfoContainer(
               appColors: AppColors(),
             )
 
