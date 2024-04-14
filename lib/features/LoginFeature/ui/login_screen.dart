@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
                 onValueChanged: (value) {
                   setState(() {
                     email =
-                        value; // Update the email value when the text field changes
+                        value; 
                   });
                 },
               ),
@@ -66,7 +66,6 @@ class _LoginState extends State<Login> {
                     final methods =
                         await _auth.fetchSignInMethodsForEmail(email);
                     if (methods.isNotEmpty) {
-                      // Email exists, navigate to Login2 widget
                       Navigator.of(context).push(
                         MaterialPageRoute(
                             builder: (context) => Login2(email: email)),

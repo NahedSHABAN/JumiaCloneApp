@@ -80,7 +80,6 @@ class _Login2State extends State<Login2> {
                       Navigator.of(context).popUntil((route) => route.isFirst);
                     }
                   } catch (e) {
-                    // Handle sign-in errors here
                     print('Failed to sign in: $e');
                   }
                 },

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jumia/features/LoginFeature/ui/widgets/bordered_button.dart';
@@ -90,25 +92,12 @@ class _Register1State extends State<Register1> {
               Button(
                 width: 310.w,
                 color: appColors.secondColor,
-                onPressed: () async {
+                onPressed: () {
                   // Check if passwords match before proceeding
                   if (passwordsMatch) {
-                    try {
-                      final userCredential =
-                          await _auth.createUserWithEmailAndPassword(
-                        email: widget.email,
-                        password: password,
-                      );
-                      final user = userCredential.user;
-                      if (user != null) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Register2()),
-                        );
-                      }
-                    } catch (e) {
-                      // Handle sign-up errors here
-                      print('Failed to sign up: $e');
-                    }
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Register2(email: widget.email, password: password)),
+                    );
                   }
                 },
                 title: 'Continue',

@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: ^4.18.0
   firebase_core: ^2.27.2
   intl_phone_number_input: ^0.7.4
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:

@@ -9,7 +9,10 @@ import 'widgets/NameTextField.dart';
 import 'widgets/PhoneTextField.dart';
 
 class Register2 extends StatefulWidget {
-  const Register2({Key? key}) : super(key: key);
+  final String email;
+  final String password; // Add this line
+
+  const Register2({Key? key, required this.email, required this.password}) : super(key: key);
 
   @override
   State<Register2> createState() => _Register2State();
@@ -18,6 +21,7 @@ class Register2 extends StatefulWidget {
 class _Register2State extends State<Register2> {
   late String firstName = '';
   late String lastName = '';
+  late String phoneNumber = ''; // Added phoneNumber variable
   static const appColors = AppColors();
 
   @override
@@ -61,7 +65,11 @@ class _Register2State extends State<Register2> {
 
               PhoneNumberTextField(
                 label: 'Phone Number',
-                onValueChanged: (String) {},
+                onValueChanged: (value) {
+                  setState(() {
+                    phoneNumber = value;
+                  });
+                },
               ),
               SizedBox(height: 100.h), // Vertical spacing
               Button(
@@ -69,7 +77,15 @@ class _Register2State extends State<Register2> {
                 color: appColors.secondColor,
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => Register3()),
+                    MaterialPageRoute(
+                      builder: (context) => Register3(
+                        email: widget.email,
+                        password: widget.password, // Pass the password here
+                        firstName: firstName,
+                        lastName: lastName,
+                        phoneNumber: phoneNumber,
+                      ),
+                    ),
                   );
                 },
                 title: 'Continue',
